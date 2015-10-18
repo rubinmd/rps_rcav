@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4 col-xs-offset-2">
+       <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title text-center">Scissors</h3>
+        </div>
+        <div class="panel-body">
+          <img class="img-responsive" src="assets/images/scissors.png">
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-4">
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <h3 class="panel-title text-center"><%=@opp_throw.capitalize%></h3>
+        </div>
+        <div class="panel-body">
+          <img class="img-responsive" src="assets/images/<%=@opp_throw%>.png">
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-2">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <div class="well">
+      <%if @result == "win"%>
+        <%@color="success"%>
+      <%elsif @result == "lose"%>
+        <%@color="danger"%>
+      <% else @color="warning"%>
+      <%end%>
+        <h1 class="text-center"><span class="label label-<%=@color%>">You <%=@result%>!</span></h1>
+      </div>
+    </div>
+  </div>
+</div>
